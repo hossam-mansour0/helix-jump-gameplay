@@ -34,10 +34,10 @@ LEVEL = 1
 sound_on = 1
 
 pygame.mixer.init()
-game_over_sound = pygame.mixer.Sound("gameover.wav")
-Level_up_sound = pygame.mixer.Sound("levelup.wav")
-hit = pygame.mixer.Sound("ball_hit.wav")
-pygame.mixer.music.load("theme.mp3")
+game_over_sound = pygame.mixer.Sound("assets/gameover.wav")
+Level_up_sound = pygame.mixer.Sound("assets/levelup.wav")
+hit = pygame.mixer.Sound("assets/ball_hit.wav")
+pygame.mixer.music.load("assets/theme.mp3")
 pygame.mixer.music.play(-1)
 pygame.mixer.music.set_volume(.1)
 
@@ -81,13 +81,13 @@ def load_textures():
 
     # Load images from file system
     images = []  # texture init step [2]
-    images.append(pygame.image.load("sky.png"))
-    images.append(pygame.image.load("level_up.png"))
-    images.append(pygame.image.load("game_over.png"))
-    images.append(pygame.image.load("restart.png"))
-    images.append(pygame.image.load("gonext.png"))
-    images.append(pygame.image.load("start.png"))
-    images.append(pygame.image.load("helix.png"))
+    images.append(pygame.image.load("assets/sky.png"))
+    images.append(pygame.image.load("assets/level_up.png"))
+    images.append(pygame.image.load("assets/game_over.png"))
+    images.append(pygame.image.load("assets/restart.png"))
+    images.append(pygame.image.load("assets/gonext.png"))
+    images.append(pygame.image.load("assets/start.png"))
+    images.append(pygame.image.load("assets/helix.png"))
 
     # textures list contains all images in the needed format for textures
     textures = [pygame.image.tostring(imagee, "RGBA", True)
@@ -328,7 +328,7 @@ def restart():
         angle_air[i] = random.uniform(.5, .75)
 
     # pygame.mixer.music.stop()
-    # pygame.mixer.music.load("theme.mp3")
+    # pygame.mixer.music.load("assets/theme.mp3")
     # pygame.mixer.music.play(-1)
     # pygame.mixer.music.set_volume(.2)
 
